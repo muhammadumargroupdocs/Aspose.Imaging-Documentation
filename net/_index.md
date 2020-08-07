@@ -21,9 +21,9 @@ The component supports the most common raster file formats and offers a wide ran
 
 Following are the links to some useful resources you may need to accomplish your tasks.
 
-- [Aspose.Imaging for .NET Online Documentation](/imaging/net/)
-- [Aspose.Imaging for .NET Features](/imaging/net/features/)
-- [Aspose.Imaging for .NET Limitations](/imaging/net/known-issues/)
+- [Aspose.Imaging for .NET Online Documentation](/)
+- [Aspose.Imaging for .NET Features](features/)
+- [Aspose.Imaging for .NET Limitations](/known-issues/)
 - [Aspose.Imaging for .NET Release Notes](/imaging/net/release-notes/)
 - [Aspose.Imaging for .NET Product Page](https://products.aspose.com/imaging/net)
 - [Install Aspose.Imaging for .NET NuGet Package](https://www.nuget.org/packages/Aspose.Imaging/)

@@ -9,20 +9,20 @@ The Programmer's Guide contains information that is essential to know when build
 ##### **Guide Structure**
 The Programmer’s Guide is split into chapters that cover Aspose.Imaging's main features:
 
-- [Drawing Images](http://www.aspose.com/docs/display/imagingnet/Drawing+Images)
-- [Drawing Images using Graphics](http://www.aspose.com/docs/display/imagingnet/Drawing+Images+using+Graphics)
-- [Drawing Images using GraphicsPath](http://www.aspose.com/docs/display/imagingnet/Drawing+Images+using+GraphicsPath)
-- [Creating, Opening and Saving Images](http://www.aspose.com/docs/display/imagingnet/Creating%2C+Opening+and+Saving+Images)
-- [Modifying Images](http://www.aspose.com/docs/display/imagingnet/Modifying+Images)
-- [Converting Images](http://www.aspose.com/docs/display/imagingnet/Converting+Images)
-- [Manipulating TIFF Images](http://www.aspose.com/docs/display/imagingnet/Manipulating+TIFF+Images)
-- [Manipulating JPEG Images](http://www.aspose.com/docs/display/imagingnet/Manipulating+JPEG+Images)
-- [Manipulating PNG Images](http://www.aspose.com/docs/display/imagingnet/Manipulating+PNG+Images)
-- [Manipulating WebP Images](http://www.aspose.com/docs/display/imagingnet/Manipulating+WebP+Images)
-- [Manipulating Photoshop Formats](http://www.aspose.com/docs/display/imagingnet/Manipulating+Photoshop+Formats)
-- [Managing DjVu Format](http://www.aspose.com/docs/display/imagingnet/Manipulating+DjVu+Formats)
-- [Manipulating DICOM Formats](http://www.aspose.com/docs/display/imagingnet/Manipulating+DICOM+Formats)
-- [Migrating from earlier versions of Aspose.Imaging](http://www.aspose.com/docs/display/imagingnet/Manipulating+Metafiles)
+- [Drawing Images](../drawing-images)
+- [Drawing Images using Graphics](../drawing-images)
+- [Drawing Images using GraphicsPath](../drawing-images-using-graphics/)
+- [Creating, Opening and Saving Images](../creating-opening-and-saving-images/)
+- [Modifying Images](../modifying-images)
+- [Converting Images](../converting-images)
+- [Manipulating TIFF Images](../manipulating-tiff-images)
+- [Manipulating JPEG Images](../manipulating-jpeg-images)
+- [Manipulating PNG Images](../manipulating-png-images)
+- [Manipulating WebP Images](../manipulating-webp-images)
+- [Manipulating Photoshop Formats](../manipulating-photoshop-formats)
+- [Managing DjVu Format](../manipulating-djvu-formats)
+- [Manipulating DICOM Formats](../manipulating-dicom-formats)
+- [Migrating from earlier versions of Aspose.Imaging](../manipulating-metafiles)
 
 {{% alert color="primary" %}} 
 
