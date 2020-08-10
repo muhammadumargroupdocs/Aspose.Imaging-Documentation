@@ -3,6 +3,7 @@ title: Aspose.Imaging for SharePoint
 type: docs
 weight: 30
 url: /sharepoint/
+is_root: true
 ---
 
 **Welcome to the Aspose.Imaging for SharePoint**
