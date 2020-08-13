@@ -90,8 +90,9 @@ Aspose.Imaging.FileFormats.Psd.Layers.LayerResources.VectorPaths.BezierKnotRecor
 
 **IMAGINGNET-3901 Application never exits when converting EMF to SVG on Linux**
 
-execute this example in Linux environment.
+Execute this example in Linux environment.
 
+```
 using (Image image = Image.Load("sample.emf"))  
 {  
      SvgOptions saveOptions = new SvgOptions();  
@@ -99,11 +100,14 @@ using (Image image = Image.Load("sample.emf"))
      saveOptions.VectorRasterizationOptions.PageSize = image.Size;  
      image.Save("output.svg", saveOptions);  
 }
+```
 
 **IMAGINGNET-3960 Incorrect image size after applying Crop/Resize/RotateFlipAll
 operations on Gif image with subsequent export to WebP**
 
 // 1. Crop operation  
+
+```
 public void TestCrop()  
 {  
     string inputFile = "test.gif";  
@@ -122,8 +126,11 @@ public void TestCrop()
 but was 322  
    }  
 }
+```
 
 // 2. Resize operation  
+
+```
 public void TestResize()  
 {  
     string inputFile = "test.gif";  
@@ -142,8 +149,11 @@ public void TestResize()
 but was 322  
    }  
 }
+```
 
 // 3. RotateFlipAll operation  
+
+```
 public void TestRotateFlipAll()  
 {  
     string inputFile = "test.gif";  
@@ -164,9 +174,11 @@ Expected 478, but was 529
         Assert.AreEqual(initSize.Height, image.Width);  
    }  
 }
+```
 
 **IMAGINGNET-3947 Black output after resizing JPG**
 
+```
 using (Image image = Image.Load("image01-25MB.jpg"))  
            {  
                float opacity = ((RasterImage)image).ImageOpacity;  
@@ -174,9 +186,11 @@ using (Image image = Image.Load("image01-25MB.jpg"))
                 image.Resize(600, 400);  
                 image.Save("resize.jpg");  
            }
+```
 
 **IMAGINGNET-3941 Image saving failed exception when converting EMF** 
 
+```
 string baseFolder = \@"D:\\";  
 string file = "sample.emf";  
 string inputFileName = Path.Combine(baseFolder, file);  
@@ -193,9 +207,11 @@ using (Image image = Image.Load(fileStream))
       }  
 });  
 }
+```
 
 **IMAGINGNET-3931 Converting to 1 bitdepth PNG results in black background**
 
+```
 public void ImagingNet3931Test()  
         {  
            string inputFilePath = "00020.png";  
@@ -331,10 +347,14 @@ bitsPerSample, bitsPerSample, bitsPerSample }
                image.Save(outputImageFilePath, exportOptions);  
             }  
         }
+```
 
 **IMAGINGNET-3926 20.5 WMF to PNG rasterization leads to empty black image**
 
-            string fileName = "test.wmf";  
+            
+
+```
+string fileName = "test.wmf";  
             string baseFolder = \@"D:\\";  
             string inputFilePath = TestDirectoryHelper.CombinePath(baseFolder,
 fileName);  
@@ -365,12 +385,14 @@ image is superimposed on a transparent background.
 However, in the case of a non-transparent background, the image is overlaid
 taking into account TernaryRasterOperation.  
 [https://docs.microsoft.com/en-us/windows/win32/api/wingdi/nf-wingdi-bitblt](http://docs.microsoft.com/en-us/windows/win32/api/wingdi/nf-wingdi-bitblt)
+```
 
 **IMAGINGNET-3902 Blank image when converting EMF to PNG on Linux**
 
-execute this example in Linux environment.  
-Create font folder and add MerryChristmasFlake.ttf to folder.
+//Execute this example in Linux environment.  
+//Create font folder and add MerryChristmasFlake.ttf to folder.
 
+```
 FontSettings.SetFontsFolder("font");  
 using (Image image = Image.Load("sample.emf"))  
 {  
@@ -379,23 +401,29 @@ using (Image image = Image.Load("sample.emf"))
      saveOptions.VectorRasterizationOptions.PageSize = image.Size;  
      image.Save("output.png", saveOptions);  
 }
+```
 
 **IMAGINGNET-3863 Application never exits when converting SVG to PNG/JPG on
 Linux**
 
-execute this example in Linux environment.
+//execute this example in Linux environment.
 
+```
 FontSettings.DefaultFontName = "Arial";  
 using (Stream stream = File.OpenRead("missing-font2.svg"))  
 using (Image image = Image.Load(stream))  
 {  
     image.Save("output.png", new PngOptions());  
 }
+```
 
 **IMAGINGNET-3747 Color information and left margin space is lost on exporting
 WMF to PDF**
 
-            string baseFolder = \@"D:\\";  
+          
+
+```
+  string baseFolder = \@"D:\\";  
             string fileName = \@"Test1.wmf";  
             string inputFilePath = Path.Combine(baseFolder, fileName);  
             string outputFilePath = inputFilePath + ".pdf";  
@@ -413,10 +441,14 @@ WMF to PDF**
                     }  
                 });  
             }
+```
 
 **IMAGINGNET-3925 Exception on rotating big TIFF/PNG/JPEG files**
 
-        public void ImagingNet3925Test()  
+     
+
+```
+   public void ImagingNet3925Test()  
         {  
            string inputFilePath = "30mb.jpg";  
            string outputFilePath1 ="30mb_jpg.jpg";  
@@ -564,10 +596,12 @@ bitsPerSample, bitsPerSample, bitsPerSample }
                image.Save(outputImageFilePath, exportOptions);  
             }  
         } 
+```
 
 **IMAGINGNET-3965 Support path extraction from tiff to psd**
 
- // Transfer Clipping Paths during export from TIFF to PSD image
+```
+// Transfer Clipping Paths during export from TIFF to PSD image
 
 // Its quite helpful to use Clipping Paths in PSD images. You can easily
 transfer your Clipping Paths to PSD image using the following code:
@@ -642,3 +676,6 @@ private static VectorPathRecord CreateBezierRecord(PointF point)
 {  
    return new BezierKnotRecord { PathPoints = new[] { point, point, point } };  
 }
+```
+
+

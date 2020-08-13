@@ -527,11 +527,13 @@ Property    Aspose.Imaging.FileFormats.Webp.WebPImage.Width
 
 **IMAGINGNET-3623 QA 19.11 .NET 3549 Opaque parts**
 
+```
 using (Image image = Image.Load("sample_car.svg"))  
 {  
  image.Resize(image.Width \* 2, image.Height \* 2);  
  image.Save("sample_car_resize_2_2.png", new PngOptions());  
 }
+```
 
 **IMAGINGNET-2548 Introduce new classes for vector and multi page images**
 
@@ -542,6 +544,7 @@ are inherited from this class.* Whereas bitmap images are inherited from
 RasterImage. That allows you to uniquely separate raster and vector images.  
 For example:
 
+```
 using (Image image = Image.Load(fileName))  
 
 {  
@@ -563,6 +566,7 @@ else
 }
 
 }
+```
 
  The IMultipageImage interface has been introduced, thanks to which you can
 determine whether the image contains layers/pages/ frames. All multi-page
@@ -572,6 +576,7 @@ the library.
 
 For example:
 
+```
 using (Image image = Image.Load(fileName))  
 {  
     if (image is IMultipageImage)  
@@ -579,6 +584,7 @@ using (Image image = Image.Load(fileName))
          var pages = ((IMultipageImage)image).Pages;  
     }  
 }
+```
 
 2.*Export has been improved; exporting multi-page images has become easier*
 *thanks to the MultiPageOptions option.* With this option you can specify the
@@ -587,6 +593,7 @@ single-page format, the 1st page of the range will be exported; in the case
 of export to a multi-page format, all pages of the range will be exported.  
 3.1. Example of export from multi-page format to single-page:
 
+```
 int startPage = 3;  
 int countPage = 2;  
 using (Image image = Image.Load(fileName))  
@@ -596,12 +603,14 @@ pngOptions.MultiPageOptions = new MultiPageOptions(new IntRange(startPage,
 countPage));  
 image.Save(outFileName, pngOptions);  
 }
+```
 
 Here, the one 4th page will be exported. Png is a single-page format. And page
 counting is done from scratch.
 
 3.2. Export from multi-page format to multi-page
 
+```
  int startPage = 0;
 
  int countPage = 2;
@@ -619,11 +628,13 @@ countPage));
      image.Save(outFileName, tiffOptions);
 
  }
+```
 
 Here the 4th and 5th pages will be exported to the tiff format
 
 Please add export method:
 
+```
 private void ExportImage(ImageOptionsBase imageOptions, string ext)  
 {
 
@@ -672,9 +683,11 @@ image.Save(outFileName, imageOptions);
 }
 
 }
+```
 
 and execute this code for cross formats export:
 
+```
 ImageOptionsBase[] imageOptions = new ImageOptionsBase[] {new PsdOptions(), new
 WebPOptions(), new GifOptions(), new TiffOptions(TiffExpectedFormat.Default),
 new BmpOptions(), new JpegOptions(), new Jpeg2000Options(), new PngOptions(),
@@ -692,6 +705,7 @@ throw new Exception("imageOptions length not equal imageExt length");
 {  
 this.ExportImage(imageOptions[i], imageExt[i]);  
 }
+```
 
 Result images in this archive:
 [output.zip](https://www.dropbox.com/s/v2zdhfhgax8vxy6/output.zip?dl=0)
@@ -703,6 +717,7 @@ first one can be partially displayed since full frame is obtained by overlay.
 
 **IMAGINGNET-3633 Exception on converting tiff image to png**
 
+```
 using Aspose.Imaging;  
 using Aspose.Imaging.FileFormats.Tiff;  
 using Aspose.Imaging.ImageOptions;  
@@ -720,9 +735,11 @@ class Program
        }  
    }  
 }
+```
 
 **IMAGINGNET-3632 Exception on converting jpeg to pdf**
 
+```
 using (RasterImage image = (RasterImage)Image.Load("sample.jpeg"))  
 {  
     PdfOptions pdfOptions = new PdfOptions  
@@ -734,9 +751,11 @@ using (RasterImage image = (RasterImage)Image.Load("sample.jpeg"))
 
     image.Save("sample.pdf", pdfOptions);  
 }
+```
 
 **IMAGINGNET-3631 Exception while converting JPG to PDF**
 
+```
 using (RasterImage image = (RasterImage)Image.Load("stamp-the-world.jpg"))  
 {  
     PdfOptions pdfOptions = new PdfOptions  
@@ -748,6 +767,7 @@ using (RasterImage image = (RasterImage)Image.Load("stamp-the-world.jpg"))
 
     image.Save("stamp-the-world.pdf", pdfOptions);  
 }
+```
 
 **IMAGINGNET-3624 Support different raster data types in TIFF format**
 
@@ -756,11 +776,14 @@ using (RasterImage image = (RasterImage)Image.Load("stamp-the-world.jpg"))
 // Example 1. Loading raw data in accordance with its own raw data format.  
 // Raw data after decoding is processed to eliminate format-specific effects
 (prediction and invert color component values).  
+
+```
 using (RasterImage image = (RasterImage)Image.Load("input.tif"))  
 {  
 image.LoadRawData(image.Bounds, image.RawDataSettings, new
 CustomRawDataLoader());  
 }  
+```
 
 // Example 2. Raw data loading according to user-specified raw data format.  
 // In this case, in addition, raw data is converted from its own format to the
@@ -768,6 +791,8 @@ one specified by the user.
 // Note that so far not all raw data formats can be converted to other formats
 (since not all color converters are still implemented and registered at the
 ColorConverterFactory).  
+
+```
 using (RasterImage image = (RasterImage)Image.Load("input.tif"))  
 {  
    RawDataSettings rawDataSettings = new RawDataSettings()  
@@ -781,11 +806,14 @@ using (RasterImage image = (RasterImage)Image.Load("input.tif"))
 image.LoadRawData(image.Bounds, image.RawDataSettings, new
 CustomRawDataLoader());  
 }  
+```
 
 // Example 3. Loading raw raw data without processing.  
 // Format-specific effects (prediction and invert color component values) may be
 present in this data, therefore this data cannot be used in color converters
 without pre-processing.  
+
+```
 using (RasterImage image = (RasterImage)Image.Load("input.tif"))  
 {  
 image.LoadRawData(image.Bounds, null, new CustomRawDataLoader());  
@@ -824,17 +852,21 @@ LoadOptions loadOptions)
        // custom raw data processing  
     }  
 }
+```
 
 **IMAGINGNET-3588 Exception on converting TIFF to PNG **
 
+```
 using (Image image = Image.Load("Test TIFF.tiff"))  
 {  
     image.Save("Test TIFF.png", new PngOptions());  
 }
+```
 
 **IMAGINGNET-3409 Allow speed or memory optimization strategies for Tiff
 format**
 
+```
 // Setting a memory limit of 10 megabytes for target loaded image  
 using (Image image = Image.Load("Default.tiff", new LoadOptions { BufferSizeHint
 = 10 }))  
@@ -877,17 +909,22 @@ BufferSizeHint = 10 }))
    image.Save("TiffNoCompressionRgb_export.tiff", new
 TiffOptions(TiffExpectedFormat.TiffNoCompressionRgb));  
 }
+```
 
 **IMAGINGNET-3408 Allow speed or memory optimization strategies for Gif format**
 
+```
 // Setting a memory limit of 10 megabytes for target loaded image  
 using (Image image = Image.Load("flowers.gif", new LoadOptions { BufferSizeHint
 = 10 }))  
 {  
    image.Save("flowers_export.gif", new GifOptions());  
 }
+```
 
 **IMAGINGNET-3364 Unify processing of multi page image export**  
+
+```
 string baseFolder = "D:\\\\images";  
 string outputFolderName = Path.Combine(baseFolder, "out");  
 string[] files = new[] { "MultiframePage1.dicom", "VariousObjectsMultiPage.odg"
@@ -916,3 +953,6 @@ SmoothingMode.None;
       image.Save(outFileName, imageOptions);  
     }  
  }
+```
+
+

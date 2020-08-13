@@ -190,7 +190,7 @@ using Clipping Path and save the path within a file. Clipping Paths allow you to
 hide the part of an image you don't want to appear.   
 Anything inside the clipping path will be visible, but anything outside of it
 will be transparent.  
-  
+
 Other words Photoshop makes it possible to isolate certain parts of an image,
 without permanently changing the layer.  
 This allows you to tweak the image at any point in the creative process.
@@ -199,12 +199,13 @@ out objects or people in Photoshop that allows you to create image files with
 transparent backgrounds. This approach works best  
 with objects or people with "hard" edges around the object or person you want to
 cut out.  
-  
+
 \#\#\# Access Clipping Paths in TIFF image  
 \*PathResources\* property allows you to access Clipping Paths in TIFF frame.
 The following code retrieves paths from TIFF image  
 and displays their names in the console:  
-  
+
+```
 using (var image = (TiffImage)Image.Load("Sample.tif"))  
 {  
    foreach (var path in image.ActiveFrame.PathResources)  
@@ -212,27 +213,31 @@ using (var image = (TiffImage)Image.Load("Sample.tif"))
        Console.WriteLine(path.Name);  
     }  
 }  
-  
+```
+
 \#\#\# Modify existing Clipping Paths  
 You can easily modify already existing Clipping Paths. For instance, you can
 keep only one Clipping Path in the image:  
-  
+
+```
 using (var image = (TiffImage)Image.Load("Sample.tif"))  
 {  
    var paths = image.ActiveFrame.PathResources;  
    image.ActiveFrame.PathResources = paths.Take(1).ToList();  
    image.Save();  
 }  
-  
+```
+
 \#\#\# Create Clipping Path manually  
 You can manually create Clipping Path in TIFF image. In order to do that you
 need to create an instance of \*PathResource\* class.  
 The following code demonstrates the way how you can create an empty path in TIFF
 image:  
-  
+
+```
 var options = new TiffOptions(TiffExpectedFormat.Default);  
 var frame = new TiffFrame(options, 800, 600);  
-  
+
 using (var image = new TiffImage(frame))  
 {  
    image.ActiveFrame.PathResources = new List\<PathResource\>  
@@ -244,10 +249,11 @@ using (var image = new TiffImage(frame))
            Records = new List\<VectorPathRecord\>()  
         }  
     };  
-  
+
    image.Save("ImageWithEmptyPath.tiff");  
 }  
-  
+```
+
 \#\#\# Clipping Path content  
 To create your own Clipping Paths you need to understand their content.
 Photoshop stores its paths as resources with IDs in  
@@ -255,24 +261,25 @@ the range 2000 through 2997. The name of the resource is the name given to the
 path when it was saved. If the file contains a  
 resource with an ID of 2999, then this resource contains the name of the
 clipping path. Each path has a set of records to hold the data.  
-  
+
 \*\*Record classes:\*\*  
 \*LengthRecord\* - contains the number of Bezier knot records.  
 \*BezierKnotRecord\* - describes the knots of the path.  
 \*ClipboardRecord\* - contains four fixed-point numbers for the bounding
 rectangle.  
-  
+
 More details you can find in  
 [Adobe Photoshop File Formats Specification]
 (https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/).
 
 ### IMAGINGNET-3822 18.8-20.3: Cannot draw semi transparent image<br>
 
+```
 using (Image backgoundImage = Image.Load("image1.png"))  
 {  
     Graphics graphics = new Graphics(backgoundImage) { SmoothingMode =
 SmoothingMode.HighQuality };  
-  
+
     ImageAttributes imageAttributes = new ImageAttributes();  
     ColorMatrix colorMatrix = new ColorMatrix { Matrix33 = 0.5f };  
     imageAttributes.SetColorMatrix(colorMatrix, ColorMatrixFlag.Default,
@@ -280,19 +287,23 @@ ColorAdjustType.Bitmap);
      
     RectangleF rect = new RectangleF(0, 0, backgoundImage.Width / 3f,
 backgoundImage.Height);  
-  
+
    using (Image icon = Image.Load("icon1.png"))  
    {  
         graphics.DrawImage(icon, rect, GraphicsUnit.Pixel, imageAttributes);  
    }  
-  
+
     backgoundImage.Save("output_Net.20.3.png");  
 }
+```
+
+
 
 ### IMAGINGNET-3724 Support of export readable full frame gif to multipage image formats
 
+```
 // Added support for full-frame export from gif format  
-  
+
 string baseDirectoryPath = \@"D:\\";  
 string fileName = "Animation.gif";  
 string inputFilePath = Path.Combine(baseDirectoryPath, fileName);  
@@ -309,9 +320,13 @@ TiffOptions(TiffExpectedFormat.TiffDeflateRgb)
                         { MultiPageOptions = new
              MultiPageOptions(new IntRange(2, 5))});  
 }
+```
+
+
 
 ### IMAGINGNET-3821 Imaging WMF to PDF conversion issues
 
+```
 public void FileToPdf(Stream input, Stream output)  
 {  
    using (var image =  Image.Load(input))  
@@ -326,13 +341,17 @@ Aspose.Imaging.ImageOptions.WmfRasterizationOptions
                                { PageWidth = image.Width, PageHeight =
 image.Height }  
        };  
-  
+
         image.Save(output, exportOptions);  
    }  
 }
+```
+
+
 
 ### IMAGINGNET-3819 ImageSave exception on exporting to PDF
 
+```
 public static void FileToPdf()  
 {  
     String path = \@"C:\\Users\\mudas\\Downloads\\svg_example\\";  
@@ -348,13 +367,17 @@ Aspose.Imaging.ImageOptions.SvgRasterizationOptions
                                { PageWidth = image.Width, PageHeight =
 image.Height }  
         };  
-  
+
         image.Save(path+"svg.pdf", exportOptions);  
     }  
 }
+```
+
+
 
 ### IMAGINGNET-3812 Removing Subject and Comments from Tiff properties
 
+```
 private static void CleanExifData(TiffOptions frameOptions)  
 {  
     frameOptions.Artist = null;  
@@ -368,21 +391,25 @@ private static void CleanExifData(TiffOptions frameOptions)
     frameOptions.ScannerModel = null;  
     frameOptions.SoftwareType = null;  
     frameOptions.TargetPrinter = null;  
-  
+
     frameOptions.XPTitle = null;  
     frameOptions.XPComment = null;  
     frameOptions.XPAuthor = null;  
     frameOptions.XPKeywords = null;  
     frameOptions.XPSubject = null;  
 }
+```
+
+
 
 ### IMAGINGNET-3764 On conversion from EMF to PNG or SVG a black "border" appears
 
+```
 // Added support for TernaryRasterOperations (SrcAnd,SrcPaint,SrcInvert) in
 metafiles  
 // (emf, wmf). This will allow you to get // more correct images when
 rasterizing metafiles.  
-  
+
   string baseFolder = "D:";  
   string file = "x.emf";  
   string inputFileName = Path.Combine(baseFolder, file);  
@@ -395,9 +422,13 @@ EmfRasterizationOptions();
       image.Save(outputFileName, new PngOptions() { VectorRasterizationOptions =
 emfRasterizationOptions });  
    }
+```
+
+
 
 ### IMAGINGNET-3820 Exception combining TIFF images
 
+```
 public static void CombineImageFiles(string fpDest, string[] safp)  
    {  
      safp = safp.Where(File.Exists).ToArray();  
@@ -405,7 +436,7 @@ public static void CombineImageFiles(string fpDest, string[] safp)
       {  
          return;  
       }  
-  
+
      using (TiffImage image = (TiffImage)Image.Load(safp[0]))  
       {  
          List\<IDisposable\> srcImages = new List\<IDisposable\>();  
@@ -421,7 +452,7 @@ public static void CombineImageFiles(string fpDest, string[] safp)
                  image.AddFrame(frame);  
               }  
           }  
-  
+
          try  
           {  
               TiffOptions outputSettings = new
@@ -434,13 +465,13 @@ TiffOptions(TiffExpectedFormat.Default);
               outputSettings.Palette =
 ColorPaletteHelper.Create4BitGrayscale(false);  
               outputSettings.ResolutionSettings = res;  
-  
+
               // Setting empty page exporting action to activate the  
               // batch export mode (needed for economical use of memory)  
               // It is available in Aspose.Imaging 20.3+  
               image.PageExportingAction = (index, page) =\> { };  
               image.Save(fpDest, outputSettings);  
-  
+
           }  
       
          finally  
@@ -452,11 +483,16 @@ ColorPaletteHelper.Create4BitGrayscale(false);
           }  
        }  
     }
+```
+
+
 
 ### IMAGINGNET-3417 Allow speed or memory optimization strategies for Dicom format
 
 // Example 1. Setting a memory limit of 50 megabytes for operations on the
 created Dicom image  
+
+```
 var imageOptions = new DicomOptions();  
 imageOptions.Source = new FileCreateSource("created.dcm", false);  
 imageOptions.BufferSizeHint = 50;  
@@ -464,12 +500,15 @@ using (Image image = Image.Create(imageOptions, 1000, 1000))
 {  
 // Do something with the created image  
 //...  
-  
+
 image.Save();  
 }  
-  
+```
+
 // Example 2. Setting a memory limit of 20 megabytes for operations on the
 loaded Dicom image  
+
+```
 var loadOptions = new LoadOptions();  
 loadOptions.BufferSizeHint = 20;  
 using (Image image = Image.Load("image.dcm", loadOptions))  
@@ -477,9 +516,12 @@ using (Image image = Image.Load("image.dcm", loadOptions))
 // Do something with the loaded image  
 //...  
 }  
-  
+```
+
 // Example 3. Settings a memory limit of 30 mebagytes for export-to-dicom
 operation  
+
+```
 var loadOptions = new LoadOptions();  
 loadOptions.BufferSizeHint = 30;  
 using (Image image = Image.Load("image.png", loadOptions))  
@@ -498,11 +540,11 @@ using (DicomImage image = (DicomImage)Image.Create(
    graphics.FillRectangle(new SolidBrush(Color.BlueViolet), image.Bounds);  
    graphics.FillRectangle(new SolidBrush(Color.Aqua), 10, 20, 50, 20);  
    graphics.FillEllipse(new SolidBrush(Color.Orange), 30, 50, 70, 30);  
-  
+
    // Save the pixels of the drawn image. They are now on the first page of the
 Dicom image.  
    int[] pixels = image.LoadArgb32Pixels(image.Bounds);  
-  
+
    // Add a few pages after, making them darker  
    for (int i = 1; i \< 5; i++)  
     {  
@@ -510,7 +552,7 @@ Dicom image.
        page.SaveArgb32Pixels(page.Bounds, pixels);  
        page.AdjustBrightness(i \* 30);  
     }  
-  
+
    // Add a few pages in front of the main page, making them brighter  
    for (int i = 1; i \< 5; i++)  
     {  
@@ -518,7 +560,10 @@ Dicom image.
        page.SaveArgb32Pixels(page.Bounds, pixels);  
        page.AdjustBrightness(-i \* 30);  
     }  
-  
+
    // Save the created multi-page image to the output file  
    image.Save("MultiPage.dcm");  
 }
+```
+
+

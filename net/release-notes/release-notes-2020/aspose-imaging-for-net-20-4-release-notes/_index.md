@@ -4074,8 +4074,9 @@ Usage Examples:
 
 ### IMAGINGNET-3788 Implement support text in the CDR format on X3 and below versions
 
+```
 //Implemented text support in CDR versions X3 and below.  
-  
+
 string baseFolder = \@"D:";  
 string fileName = "Placards_b.cdr";  
 string inputFilePath = Path.Combine(baseFolder, fileName);  
@@ -4090,6 +4091,9 @@ CdrRasterizationOptions();
     pdfOptions.VectorRasterizationOptions = rasterizationOptions;  
     image.Save(outputFileName, pdfOptions);  
 }
+```
+
+
 
 ### IMAGINGNET-3629 Implement export to Html5 canvas format
 
@@ -4098,16 +4102,18 @@ CdrRasterizationOptions();
 graphics. It allows to draw pathes, boxes, texts,  
 // images and many other things. For instance, Canvas can be // // used to draw
 graphs, combine photos, or create simple (or complex) diagrams.  
-  
+
 // The Canvas element is not supported in some older browsers, but is supported
 in recent versions of all major browsers.  
 // Using the Canvas is not very difficult. You do not have to know HTML,
 JavaScript or CSS. Aspose.Imaging library will  
 // generate all required code for you.  
-  
+
 // \#\#\# Create a simple Canvas image  
 // Any vector image (SVG, WMF, CMX, etc.) can be used as a source for your
 Canvas images. The next code creates a simple Canvas image:    
+
+```
 using (var image = Image.Load(\@"Sample.svg"))  
 {  
     image.Save(\@"Canvas.html", new Html5CanvasOptions  
@@ -4115,29 +4121,35 @@ using (var image = Image.Load(\@"Sample.svg"))
         VectorRasterizationOptions = new SvgRasterizationOptions()  
     });  
 }    
+```
+
 // Now you can open Canvas.html in your browser to see Canvas image.  
 // \#\#\# HTML page structure  
 // The Canvas image is represented by HTML page. The typical page structure is
 the following:  
-\<!DOCTYPE html\>  
-\<html lang="en" xmlns="<http://www.w3.org/1999/xhtml>"\>  
-\<head\>  
-   \<meta charset="utf-8"/\>  
-   \<title\>\</title\>  
-\</head\>  
-\<body\>  
-\<canvas id="7390b3105f4c4a4f929987e3d6589149"\>\</canvas\>  
-\<script\>  
+
+```
+<!DOCTYPE html\>  
+<html lang="en" xmlns="<http://www.w3.org/1999/xhtml>"\>  
+<head\>  
+   <meta charset="utf-8"/\>  
+   <title\>\</title\>  
+</head\>  
+<body\>  
+<canvas id="7390b3105f4c4a4f929987e3d6589149"\>\</canvas\>  
+<script\>  
        ...  
-\</script\>  
-\</body\>  
-\</html\>  
-  
+</script\>  
+</body\>  
+</html\>  
+```
+
 // \#\#\# Add Canvas image to existing HTML page  
 // You can embed more than one Canvas image within HTML page or update already
 exsiting page.  
 // In order to do that you need to export only the Canvas tag:  
-   
+
+```
 using (var image = Image.Load(\@"Sample.svg"))  
 {  
     image.Save(\@"Canvas.html", new Html5CanvasOptions  
@@ -4146,7 +4158,8 @@ using (var image = Image.Load(\@"Sample.svg"))
         FullHtmlPage = false  
     });  
 }  
-   
+```
+
 // In this case Canvas image will contain only the next content:  
 \<canvas id="7390b3105f4c4a4f929987e3d6589149"\>\</canvas\>  
 \<script\>  
@@ -4172,10 +4185,11 @@ Canvas image format.
 // Added support for compressed vector formats Emz(compressed emf),
 Wmz(compressed wmf), Svgz(compressed svg). Supported read of these formats and
 export to other formats.  
-  
+
 1.Export compressed formats to raster  
-  
-           string[] files = new[] {"example.emz", "example.wmz",
+
+```
+       string[] files = new[] {"example.emz", "example.wmz",
 "example.svgz"};  
            string baseFolder = Path.Combine("D:","Compressed");  
            foreach (var file in files)  
@@ -4191,9 +4205,13 @@ image.Width, image.Height });
 PngOptions(){VectorRasterizationOptions = vectorRasterizationOptions});  
                 }  
             }  
+
+```
+
 2.Export Emz to Emf  
-  
-           string file = "example.emz";  
+
+```
+   string file = "example.emz";  
            string baseFolder = Path.Combine("D:", "Compressed");  
            string inputFile = Path.Combine(baseFolder, file);  
            string outFile = inputFile + ".emf";  
@@ -4204,10 +4222,12 @@ EmfRasterizationOptions {PageSize = image.Size};
                image.Save(outFile, new EmfOptions {VectorRasterizationOptions =
 vectorRasterizationOptions});  
             }  
-  
+```
+
 3.Export Wmz to Wmf  
-  
-           string file = "example.wmz";  
+
+```
+  string file = "example.wmz";  
            string baseFolder = Path.Combine("D:", "Compressed");  
            string inputFile = Path.Combine(baseFolder, file);  
            string outFile = inputFile + ".wmf";  
@@ -4218,10 +4238,12 @@ WmfRasterizationOptions() { PageSize = image.Size};
                image.Save(outFile, new WmfOptions() {VectorRasterizationOptions
 = vectorRasterizationOptions});  
             }  
-  
+```
+
 4.Export Svgz to Svg  
-  
-           string file = "example.svgz";  
+
+```
+  string file = "example.svgz";  
            string baseFolder = Path.Combine("D:", "Compressed");  
            string inputFile = Path.Combine(baseFolder, file);  
            string outFile = inputFile + ".svg";  
@@ -4232,10 +4254,12 @@ SvgRasterizationOptions() { PageSize = image.Size};
                image.Save(outFile, new SvgOptions() {VectorRasterizationOptions
 = vectorRasterizationOptions});  
             }  
-  
+```
+
 5.Export Emf to Emz  
-  
-           string file = "input.emf";  
+
+```
+ string file = "input.emf";  
            string baseFolder = Path.Combine("D:", "Compressed");  
            string inputFile = Path.Combine(baseFolder, file);  
            string outFile = inputFile + ".emz";  
@@ -4246,10 +4270,12 @@ EmfRasterizationOptions() { PageSize = image.Size};
                image.Save(outFile, new EmfOptions() {VectorRasterizationOptions
 = vectorRasterizationOptions, Compress = true});  
             }  
-  
+```
+
 6.Export Wmf to Wmz  
-  
-           string file = "castle.wmf";  
+
+```
+ string file = "castle.wmf";  
            string baseFolder = Path.Combine("D:", "Compressed");  
            string inputFile = Path.Combine(baseFolder, file);  
            string outFile = inputFile + ".wmz";  
@@ -4260,10 +4286,12 @@ WmfRasterizationOptions() { PageSize = image.Size};
                image.Save(outFile, new WmfOptions() {VectorRasterizationOptions
 = vectorRasterizationOptions, Compress = true});  
             }  
-  
+```
+
 7.Export Svg to Svgz  
-  
-           string file = "juanmontoya_lingerie.svg";  
+
+```
+   string file = "juanmontoya_lingerie.svg";  
            string baseFolder = Path.Combine("D:", "Compressed");  
            string inputFile = Path.Combine(baseFolder, file);  
            string outFile = inputFile + ".svgz";  
@@ -4274,26 +4302,35 @@ SvgRasterizationOptions() { PageSize = image.Size};
                image.Save(outFile, new SvgOptions() {VectorRasterizationOptions
 = vectorRasterizationOptions, Compress = true});  
             }
+```
+
+
 
 ### IMAGINGNET-3679 Remove PSD loading support from Aspose.Imaging
 
+```
 // From 20.4 version Aspose.Imaging does not support load of psd images, but
 export to psd is supported  
 //This code throws exception as psd loading is not supported in Aspose.Imaging  
 using (var image = Image.Load("japan2.psd")  
 {  
 }  
-  
+
 //This code exports bmp image to psd  
 using (var image = Image.Load("tiger.bmp")  
 {  
     image.Save("result.psd", new PsdOptions());  
 }
+```
+
+
 
 ### IMAGINGNET-3413 Allow speed or memory optimization strategies for Webp format
 
 // Example 1. Setting a memory limit of 50 megabytes for operations on the
 created WebP image  
+
+```
 var imageOptions = new WebPOptions();  
 imageOptions.Source = new FileCreateSource("created.webp", false);  
 imageOptions.BufferSizeHint = 50;  
@@ -4302,28 +4339,37 @@ using (Image image = Image.Create(imageOptions, 1000, 1000))
 // Do something with the created image  
 image.Save();  
 }  
-  
+```
+
 // Example 2. Setting a memory limit of 20 megabytes for operations on the
 loaded WebP image  
+
+```
 var loadOptions = new LoadOptions();  
 loadOptions.BufferSizeHint = 20;  
 using (Image image = Image.Load("Lossless.webp", loadOptions))  
 {  
 // Do something with the loaded image  
 }  
-  
+```
+
 // Example 3. Settings a memory limit of 30 mebagytes for export-to-webp
 operation  
+
+```
 var loadOptions = new LoadOptions();  
 loadOptions.BufferSizeHint = 30;  
 using (Image image = Image.Load("image.png", loadOptions))  
 {  
-image.Save("exported.webp", new WebPOptions());  
+    image.Save("exported.webp", new WebPOptions());  
 }
+```
+
+
 
 ### IMAGINGNET-3770 - Cannot access a disposed object; Object name: 'DjvuImage'
 
-  
+```
 string baseFolder = \@"D:\\";  
 string inputFile = Path.Combine(baseFolder, "sample.djvu");  
 TextWriter old = Console.Out;  
@@ -4336,7 +4382,7 @@ try
           using (Image image = Image.Load(inputFile))  
           {  
           }  
-  
+
           Thread.Sleep(5000); //wait errors of thread 5 sec.  
          writer.Flush();  
           ms.Position = 0;  
@@ -4344,7 +4390,7 @@ try
           {  
               return;  
           }  
-  
+
           StreamReader reader = new StreamReader(ms);  
           string consoleOut = reader.ReadToEnd();  
           int indx = consoleOut.IndexOf("access a disposed object");  
@@ -4359,15 +4405,19 @@ finally
 {  
       Console.SetOut(old);  //set previous output  
 }
+```
+
+
 
 ### IMAGINGNET-3655 Add Aspose.Imaging .NET Core 3.1. configuration
 
+```
 using System;  
 using System.IO;  
 using Aspose.Imaging;  
 using Aspose.Imaging.ImageOptions;  
 using Aspose.Imaging.Sources;  
-  
+
 namespace QA.NetCore  
 {  
 // This example demonstrates use of Span\<T\> class with Aspose.Imaging API  
@@ -4389,7 +4439,7 @@ class TestCase3655
             {  
                JpegOptions jpegOptions = new JpegOptions();  
                jpegOptions.Source = new StreamSource(ms, true);  
-  
+
                using (var image = Image.Create(jpegOptions, width, height))  
                 {  
                    ChessBuilder(image,
@@ -4397,7 +4447,7 @@ cellSize).Save(Path.Combine(testDirectory, "chess.jpg"));
                 }  
             }  
         }  
-  
+
        /// \<summary\>  
        /// Builds the chess board  
        /// \</summary\>  
@@ -4434,16 +4484,19 @@ cellSize).Save(Path.Combine(testDirectory, "chess.jpg"));
                     }  
                 }  
             }  
-  
+
            picture.SaveArgb32Pixels(imageBounds, sPicture.ToArray());  
-  
+
            return picture;  
         }  
 }
+```
+
+
 
 ### IMAGINGNET-3774 - Converting EMF to PNG adds a border around PNG
 
-  
+```
 string baseFolder = \@"D:\\";  
 string file = "test.emf";  
 string inputFileName = Path.Combine(baseFolder, file);  
@@ -4457,3 +4510,7 @@ EmfRasterizationOptions();
      image.Save(outputFileName, new PngOptions() { VectorRasterizationOptions =
 emfRasterizationOptions, ColorType = PngColorType.TruecolorWithAlpha });  
 }
+```
+
+
+

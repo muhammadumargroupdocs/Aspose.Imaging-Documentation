@@ -186,12 +186,14 @@ Property    Aspose.Imaging.ImageOptions.ApngOptions.NumPlays
 **Creating an image and setting its pixels.**
 
 // Example 1. Creating an image and setting its pixels.  
+
+```
 using System.Diagnostics;  
 using Aspose.Imaging;  
 using Aspose.Imaging.ImageOptions;  
 using Aspose.Imaging.FileFormats.Png;  
 using Aspose.Imaging.FileFormats.Apng;  
-  
+
 // Load pixels from source raster image  
 Size imageSize;  
 int[] imagePixels;  
@@ -200,7 +202,7 @@ using (RasterImage sourceImage = (RasterImage)Image.Load("not_animated.png"))
     imageSize = sourceImage.Size;  
     imagePixels = sourceImage.LoadArgb32Pixels(sourceImage.Bounds);  
 }  
-  
+
 // Create APNG image and set its pixels  
 using (ApngImage image = (ApngImage)Image.Create(  
    new ApngOptions()  
@@ -214,34 +216,42 @@ using (ApngImage image = (ApngImage)Image.Create(
     image.SaveArgb32Pixels(image.Bounds, imagePixels);  
     image.Save();  
 }  
-  
+
 // Check output file format  
 using (Image image = Image.Load("created_apng.png")) {  
     Debug.Assert(image.FileFormat == FileFormat.Apng);  
     Debug.Assert(image is ApngImage);  
 }
+```
+
+
 
 ####  **Raster image operations **
 
+```
 // The brightness adjustment operation  
-  
+
 using Aspose.Imaging;  
 using Aspose.Imaging.FileFormats.Apng;  
-  
+
 using (ApngImage image = (ApngImage)Image.Load("elephant.png"))  
 {  
  image.AdjustBrightness(100);  
  image.Save("AdjustBrightness.png");  
 }
+```
+
+
 
 ####  Create an animated image from another single-page image 
 
+```
 // Create an animated image from another single-page image  
-  
+
 using Aspose.Imaging;  
 using Aspose.Imaging.ImageOptions;  
 using Aspose.Imaging.FileFormats.Apng;  
-  
+
 const int AnimationDuration = 1000; // 1 s  
 const int FrameDuration = 70; // 70 ms  
 using (RasterImage sourceImage = (RasterImage)Image.Load("not_animated.png"))  
@@ -252,7 +262,7 @@ using (RasterImage sourceImage = (RasterImage)Image.Load("not_animated.png"))
        DefaultFrameTime = (uint)FrameDuration,  
        ColorType = PngColorType.TruecolorWithAlpha,  
     };  
-  
+
    using (ApngImage apngImage = (ApngImage)Image.Create(  
        createOptions,  
        sourceImage.Width,  
@@ -260,37 +270,42 @@ using (RasterImage sourceImage = (RasterImage)Image.Load("not_animated.png"))
     {  
        int numOfFrames = AnimationDuration / FrameDuration;  
        int numOfFrames2 = numOfFrames / 2;  
-  
+
        apngImage.RemoveAllFrames();  
-  
+
        // add first frame  
        apngImage.AddFrame(sourceImage, FrameDuration);  
-  
+
        // add intermediate frames  
        for (int frameIndex = 1; frameIndex \< numOfFrames - 1; ++frameIndex)  
         {  
            apngImage.AddFrame(sourceImage, FrameDuration);  
            ApngFrame lastFrame = (ApngFrame)apngImage.Pages[apngImage.PageCount
+
 - 1];  
-           float gamma = frameIndex \>= numOfFrames2 ? numOfFrames - frameIndex
+      float gamma = frameIndex \>= numOfFrames2 ? numOfFrames - frameIndex
 - 1 : frameIndex;  
-           lastFrame.AdjustGamma(gamma);  
-        }  
-  
+      lastFrame.AdjustGamma(gamma);  
+          }  
+
        // add last frame  
        apngImage.AddFrame(sourceImage, FrameDuration);  
-  
+
        apngImage.Save();  
     }  
 }
+```
+
+
 
 ####  Create APNG animation based on vector graphics operations 
 
+```
 // Create APNG animation based on vector graphics operations  
-  
+
 using Aspose.Imaging;  
 using Aspose.Imaging.FileFormats.Apng;  
-  
+
 // preparing the animation scene  
 const int SceneWidth = 400;   
 const int SceneHeigth = 400;  
@@ -298,7 +313,7 @@ const uint ActDuration = 1000; // Act duration, in milliseconds
 const uint TotalDuration = 4000; // Total duration, in milliseconds  
 const uint FrameDuration = 50; // Frame duration, in milliseconds  
 Scene scene = new Scene();  
-  
+
 Ellipse ellipse = new Ellipse  
                       {  
                          FillColor = Color.FromArgb(128, 128, 128),  
@@ -308,7 +323,7 @@ Ellipse ellipse = new Ellipse
                          RadiusY = 80  
                       };  
 scene.AddObject(ellipse);  
-  
+
 Line line = new Line  
                 {  
                    Color = Color.Blue,  
@@ -317,7 +332,7 @@ Line line = new Line
                    EndPoint = new PointF(SceneWidth - 30, 30)  
                 };  
 scene.AddObject(line);  
-  
+
 IAnimation lineAnimation1 = new LinearAnimation(  
                                delegate(float progress)  
                                     {  
@@ -415,7 +430,7 @@ IAnimation fullEllipseAnimation = new SequentialAnimation() { ellipseAnimation1,
 ellipseAnimation2, ellipseAnimation3, ellipseAnimation4 };  
 scene.Animation = new ParallelAnimation() { fullLineAnimation,
 fullEllipseAnimation };  
-  
+
 // playing the scene on the newly created ApngImage  
 ApngOptions createOptions = new ApngOptions  
                                 {  
@@ -423,7 +438,7 @@ ApngOptions createOptions = new ApngOptions
 FileCreateSource("vector_animation.png", false),  
                                    ColorType = PngColorType.TruecolorWithAlpha,  
                                 };  
-  
+
 using (ApngImage image = (ApngImage)Image.Create(createOptions, SceneWidth,
 SceneHeigth))  
 {  
@@ -431,27 +446,27 @@ SceneHeigth))
    scene.Play(image, TotalDuration);  
    image.Save();  
 }  
-  
+
 /////////////////////////// Scene.cs /////////////////////////////  
-  
+
 using System.Collections.Generic;  
 using Aspose.Imaging.FileFormats.Apng;  
-  
+
 using Graphics = Aspose.Imaging.Graphics;  
-  
+
 // The graphics scene  
 public class Scene  
 {  
    private readonly List\<IGraphicsObject\> graphicsObjects = new
 List\<IGraphicsObject\>();  
-  
+
    public IAnimation Animation { get; set; }  
-  
+
    public void AddObject(IGraphicsObject graphicsObject)  
     {  
        this.graphicsObjects.Add(graphicsObject);  
     }  
-  
+
    public void Play(ApngImage animationImage, uint totalDuration)  
     {  
        uint frameDuration = animationImage.DefaultFrameTime;  
@@ -463,7 +478,7 @@ List\<IGraphicsObject\>();
             {  
                this.Animation.Update(totalElapsed);  
             }  
-  
+
            ApngFrame frame = animationImage.PageCount == 0 \|\| frameIndex \> 0  
                                   ? animationImage.AddFrame()  
                                   : (ApngFrame)animationImage.Pages[0];  
@@ -473,61 +488,61 @@ List\<IGraphicsObject\>();
             {  
                graphicsObject.Render(graphics);  
             }  
-  
+
            totalElapsed += frameDuration;  
         }  
     }  
 }  
-  
+
 /////////////////////////// IGraphicsObject.cs /////////////////////////////  
-  
+
 using Graphics = Aspose.Imaging.Graphics;  
-  
+
 // The graphics object  
 public interface IGraphicsObject  
 {  
    void Render(Graphics graphics);  
 }  
-  
+
 /////////////////////////// Line.cs /////////////////////////////  
-  
+
 using Graphics = Aspose.Imaging.Graphics;  
-  
+
 // The line  
 public class Line : IGraphicsObject  
 {  
    public PointF StartPoint { get; set; }  
-  
+
    public PointF EndPoint { get; set; }  
-  
+
    public float LineWidth { get; set; }  
-  
+
    public Color Color { get; set; }  
-  
+
    public void Render(Graphics graphics)  
     {  
        graphics.DrawLine(new Pen(this.Color, this.LineWidth), this.StartPoint,
 this.EndPoint);  
     }  
 }  
-  
+
 /////////////////////////// Ellipse.cs /////////////////////////////  
-  
+
 using Aspose.Imaging.Brushes;  
-  
+
 using Graphics = Aspose.Imaging.Graphics;  
-  
+
 // The ellipse  
 public class Ellipse : IGraphicsObject  
 {  
    public Color FillColor { get; set; }  
-  
+
    public PointF CenterPoint { get; set; }  
-  
+
    public float RadiusX { get; set; }  
-  
+
    public float RadiusY { get; set; }  
-  
+
    public void Render(Graphics graphics)  
     {  
        graphics.FillEllipse(  
@@ -538,39 +553,39 @@ public class Ellipse : IGraphicsObject
            this.RadiusY \* 2);  
     }  
 }  
-  
+
 /////////////////////////// IAnimation.cs /////////////////////////////  
-  
+
 // The animation  
 public interface IAnimation  
 {  
 // The animation duration, in milliseconds.  
    uint Duration { get; set; }  
-  
+
    void Update(uint elapsed);  
 }  
-  
+
 /////////////////////////// LinearAnimation.cs /////////////////////////////  
-  
+
 // The linear animation  
 public class LinearAnimation : IAnimation  
 {  
    private readonly AnimationProgressHandler progressHandler;  
-  
+
    public delegate void AnimationProgressHandler(float progress);  
-  
+
    public LinearAnimation(AnimationProgressHandler progressHandler)  
     {  
        if (progressHandler == null)  
         {  
            throw new System.ArgumentNullException("progressHandler");  
         }  
-  
+
        this.progressHandler = progressHandler;  
     }  
-  
+
    public uint Duration { get; set; }  
-  
+
    public void Update(uint elapsed)  
     {  
        if (elapsed \<= this.Duration)  
@@ -579,24 +594,24 @@ public class LinearAnimation : IAnimation
         }  
     }  
 }  
-  
+
 /////////////////////////// Delay.cs /////////////////////////////  
-  
+
 // The simple delay between other animations  
 public class Delay : IAnimation  
 {  
    public uint Duration { get; set; }  
-  
+
    public void Update(uint elapsed)  
     {  
        // nop  
     }  
 }  
-  
+
 /////////////////////////// ParallelAnimation.cs /////////////////////////////  
-  
+
 using System.Collections.Generic;  
-  
+
 // The parallel animation processor  
 public class ParallelAnimation : List\<IAnimation\>, IAnimation  
 {  
@@ -612,16 +627,16 @@ public class ParallelAnimation : List\<IAnimation\>, IAnimation
                    maxDuration = animation.Duration;  
                 }  
             }  
-  
+
            return maxDuration;  
         }  
-  
+
        set  
         {  
            throw new System.NotSupportedException();  
         }  
     }  
-  
+
    public void Update(uint elapsed)  
     {  
        foreach (IAnimation animation in this)  
@@ -630,11 +645,11 @@ public class ParallelAnimation : List\<IAnimation\>, IAnimation
         }  
     }  
 }  
-  
+
 /////////////////////////// SequentialAnimation.cs /////////////////////////////  
-  
+
 using System.Collections.Generic;  
-  
+
 // The sequential animation processor  
 public class SequentialAnimation : List\<IAnimation\>, IAnimation  
 {  
@@ -647,16 +662,16 @@ public class SequentialAnimation : List\<IAnimation\>, IAnimation
             {  
                summDuration += animation.Duration;  
             }  
-  
+
            return summDuration;  
         }  
-  
+
        set  
         {  
            throw new System.NotSupportedException();  
         }  
     }  
-  
+
    public void Update(uint elapsed)  
     {  
        uint totalDuration = 0;  
@@ -672,9 +687,13 @@ public class SequentialAnimation : List\<IAnimation\>, IAnimation
         }  
     }  
 }
+```
+
+
 
 ### **IMAGINGNET-3804 The shape collapsed on saving WMF to PNG**
 
+```
 using (Image image = Image.Load("image1.wmf"))  
 {  
         image.Save(  
@@ -691,9 +710,13 @@ TextRenderingHint.SingleBitPerPixel,
                    }  
              });  
 }
+```
+
+
 
 ### **IMAGINGNET-3781 Support batch export to WebP for multi-page images**
 
+```
 using (TiffImage tiffImage = (TiffImage)Image.Load("10MB_Tif.tif"))  
 {  
    // Set batch operation for pages  
@@ -702,16 +725,19 @@ using (TiffImage tiffImage = (TiffImage)Image.Load("10MB_Tif.tif"))
             // Fires garbage collection to avoid unnecessary garbage storage
 from previous pages  
             GC.Collect();  
-  
+
             ((RasterImage)page).Rotate(90);  
          };  
-  
+
    tiffImage.Save("rotated.webp", new WebPOptions());  
-  
-   /\* Attention! In batch mode all pages will be released in this line!  
-    If you want to further perform operations on the original image, you should
-reload it from the source to another instance. \*/  
+
+   /* Attention! In batch mode all pages will be released in this line!  
+    If you want to further perform operations on the original image, you should reload it from the source 
+    to another instance. */  
 }
+```
+
+
 
 ### **IMAGINGNET-3849 -Support of a new compression method DXT1 for BMP**
 
@@ -740,23 +766,28 @@ palette and 32 for the indexing). That is a compression ratio of 1:8.
 The following code demonstrates how you can compress an existing image using
 DXT1 compression:
 
+```
 using (var image = Image.Load("Tiger.bmp"))  
 {  
     image.Save("CompressedTiger.bmp", new BmpOptions { Compression =
 BitmapCompression.Dxt1 });  
-}
+} 
+```
 
 #### How to decompress image
 
 The following code shows how to decompress previously compressed image:
 
+```
 using (var image = Image.Load("CompressedTiger.bmp"))  
 {  
     image.Save("DecompressedTiger.bmp", new BmpOptions());  
-}
+} 
+```
 
 ### **IMAGINGNET-3882 Cannot extract Azure label information from XMP metadata**
 
+```
 using (JpegImage image = (JpegImage)Image.Load(path))  
 {  
    XmpPackage msipPackage = image.XmpData?.Packages.FirstOrDefault(p =\>
@@ -766,3 +797,6 @@ p.Prefix == "msip");
         Console.WriteLine(msipPackage.GetXmlValue());  
     }  
 }
+```
+
+
