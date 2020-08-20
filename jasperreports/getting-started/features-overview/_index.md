@@ -1,7 +1,7 @@
 ---
 title: Features Overview
 type: docs
-weight: 10
+weight: 20
 url: /jasperreports/features-overview/
 ---
 
