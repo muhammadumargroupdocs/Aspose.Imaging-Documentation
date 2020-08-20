@@ -1,8 +1,8 @@
 ---
-title: Installing Aspose.Cells for JasperReports
+title: Installing Aspose.Imaging for JasperReports
 type: docs
 weight: 20
-url: /jasperreports/installing-aspose-cells-for-jasperreports/
+url: /jasperreports/installing-aspose-imaging-for-jasperreports/
 ---
 
 To use **Aspose.Imaging for JasperReports** from your application, copy **aspose.imaging.jasperreports.jar** from the \lib folder of Aspose.Imaging.JasperReports.zip to the JasperReports\lib directory or to a library folder of your application. After that, you can access the exporters programmatically.
