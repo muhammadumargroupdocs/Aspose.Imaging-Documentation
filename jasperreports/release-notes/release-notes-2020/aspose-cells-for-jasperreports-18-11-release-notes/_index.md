@@ -21,10 +21,10 @@ The export formats currently include: Bmp, Gif, Dicom, Emf, Jpeg, Jpeg2000, Png,
 
 The first release of the product supports the following features:
 
-Easy and Lightweight Deployment - Aspose.Imaging for JasperReports is written purely in Java and is provided as a single JAR file that can easily be deployed on the machines running JasperReports.
-High Fidelity to Report Design - Aspose.Imaging for JasperReports exports reports in such a way that they look identical to reports exported by the built-in exporters of JasperReports.
-Multipage export -  Aspose.Imaging for JasperReports supports multipage export to the following formats:  Gif,  Dicom,  Tiff, WebP, Pdf.
-Batch export - Aspose.Imaging for JasperReports supports export reports from JasperReports in batch mode. Each page of the report will be saved as a separate file.
+- Easy and Lightweight Deployment - Aspose.Imaging for JasperReports is written purely in Java and is provided as a single JAR file that can easily be deployed on the machines running JasperReports.
+- High Fidelity to Report Design - Aspose.Imaging for JasperReports exports reports in such a way that they look identical to reports exported by the built-in exporters of JasperReports.
+- Multipage export -  Aspose.Imaging for JasperReports supports multipage export to the following formats:  Gif,  Dicom,  Tiff, WebP, Pdf.
+- Batch export - Aspose.Imaging for JasperReports supports export reports from JasperReports in batch mode. Each page of the report will be saved as a separate file.
 
 ## Usage Examples
 
