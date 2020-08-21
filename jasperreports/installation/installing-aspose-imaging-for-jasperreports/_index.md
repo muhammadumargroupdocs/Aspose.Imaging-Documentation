@@ -5,7 +5,7 @@ weight: 20
 url: /jasperreports/installing-aspose-imaging-for-jasperreports/
 ---
 
-To use **Aspose.Imaging for JasperReports** from your application, copy **aspose.imaging.jasperreports.jar** from the \lib folder of Aspose.Imaging.JasperReports.zip to the JasperReports\lib directory or to a library folder of your application. After that, you can access the exporters programmatically.
+To use **Aspose.Imaging for JasperReports** from your application, copy **aspose-imaging-jasperreports-xx.x.jar** from the \lib folder of **aspose-imaging-jasperreports-xx.x.zip** to the JasperReports\lib directory or to a library folder of your application. After that, you can access the exporters programmatically.
 
 The following example shows the typical code needed to export a report to an TIFF file using Aspose.Imaging for JasperReports. More examples can be found in the demo reports included in the product archive.
 

@@ -11,7 +11,7 @@ Aspose.Imaging for JasperReports provides a class named JasperFillManager for pr
 
 {{% /alert %}}
 
-The following code snippet demonstrates how to export the jasperPrint object to some file path.
+The following code snippet demonstrates how to create JasperPrint object to prepare a report for further image export.
 
 **Java**
 

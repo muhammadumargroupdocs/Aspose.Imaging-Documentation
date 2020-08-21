@@ -11,7 +11,7 @@ url: /jasperreports/product-overview/
 
 ### **Welcome to the Aspose.Imaging for JasperReports Documentation!**
 
-Aspose.Imaging for JasperReports is the unique solution on the market that makes possible exporting reports from JasperReports to various image file formats.
+Aspose.Imaging for JasperReports is the only solution on the market that makes it possible to export reports from JasperReports to various image file formats.
 
 The export formats currently include: BMP, GIF, DICOM, EMF, JPEG, JPEG2000, PNG, PSD, SVG, TIFF, WebP, WMF, PDF, Html5 canvas, EMZ, WMZ, SVGZ.
 

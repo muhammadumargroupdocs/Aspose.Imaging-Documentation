@@ -17,10 +17,10 @@ To run Aspose.Imaging for JasperReports demos, perform the following steps:
 
 1. Download JasperReports (e.g <https://sourceforge.net/projects/jasperreports/files/archive/>). Make sure to download the entire archived project with the source code and demos, not just a single JAR.
 1. Unpack the archived project to some location on your hard disk, for example C:\.
-1. Copy all demo folders from the \demo folder of **Aspose.Imaging.JasperReports.zip** to **\<InstallDir>\demo\samples**, where "\<InstallDir>" is the location you have unpacked JasperReports to. This step is required because demo build scripts rely on the JasperReports’ folder structure, otherwise you will need to modify build scripts.
-1. Copy **aspose.imaging.jasperreports.jar** from the \lib folder of Aspose.Imaging.JasperReports.zip to **\<InstallDir>\lib**.
+1. Copy all demo folders from the \samples folder of **aspose-imaging-jasperreports-xx.x.zip** to **\<InstallDir>\demo\samples**, where "\<InstallDir>" is the location you have unpacked JasperReports to. This step is required because demo build scripts rely on the JasperReports’ folder structure, otherwise you will need to modify build scripts.
+1. Copy **aspose-imaging-jasperreports-xx.x.jar** from the \lib folder of **aspose-imaging-jasperreports-xx.x.zip** to **\<InstallDir>\lib**.
 1. Prepare Ant Build Tool and Ivy Dependency Manager, see **\<InstallDir>\readme.txt**.
-1. Modify the **build.xml** at **\<InstallDir>\demo\samples**, add the aspose.imaging.jasperreports.jar into the classpath:
+1. Modify the **build.xml** at **\<InstallDir>\demo\samples**, add the aspose-imaging-jasperreports-xx.x.jar into the classpath:
    **\<path id="project-classpath"> ... \<pathelement location="../../lib/aspose-imaging-jasperreports-xx.xx.jar"/> </path>**.
 1. Change the current directory to **\<InstallDir>\demo\hsqldb** and run the following command line:
    **ant runServer**
