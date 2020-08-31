@@ -15,15 +15,15 @@ In order to understand the concept of Binarization, it is important to define a 
 #### **Binarization with Fixed Threshold**
 The following code snippet shows you how to use fixed threshold binarization can be applied to an image.
 
-
-
 {{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-src-main-java-com-aspose-imaging-examples-ConvertingImages-BinarizationwithFixedThreshold-BinarizationwithFixedThreshold.java" >}}
+
+
 #### **Binarization with Otsu Threshold**
 The following code snippet shows you how Otsu threshold binarization can be applied to an image.
 
-
-
 {{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-src-main-java-com-aspose-imaging-examples-ConvertingImages-BinarizationwithOtsuThreshold-BinarizationwithOtsuThreshold.java" >}}
+
+
 ### **Grayscaling**
 Gray-scaling is the process of converting a continuous-tone image to an image with discontinues gray shades. The following code snippet shows you how to use Grayscaling.
 
@@ -34,8 +34,6 @@ Gray-scaling is the process of converting a continuous-tone image to an image wi
 {{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-src-main-java-com-aspose-imaging-examples-ConvertingImages-Grayscaling-Grayscaling.java" >}}
 ## **Convert GIF Image Layers To TIFF Image**
 Sometimes it is needed to extract and convert layers of a GIF Image into another raster image format to meet an application need. Aspose.Imaging API support the feature of extracting and converting layers of a GIF Image into another raster image formats. Firstly, we will create instance of image and load GIF image from the local disk, then we will get the total count of layers in the source image using Length property of [GifFrameBlock](https://apireference.aspose.com/imaging/java/com.aspose.imaging.fileformats.gif.blocks/GifFrameBlock) class and iterate through the array of blocks. Now we will check if the block is **null** then ignore it else convert the block to TIFF image. The following code snippet shows you how to convert GIF image layers to TIFF image.
-
-
 
 {{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-src-main-java-com-aspose-imaging-examples-ConvertingImages-ConvertGIFImageLayersToTIFF-ConvertGIFImageLayersToTIFF.java" >}}
 ## **Converting SVG to Raster Format**
@@ -132,9 +130,6 @@ Aspose.Imaging for Java now supports converting images in multi threaded environ
 Aspose.Imaging now supports **SyncRoot** property while working in multi-threaded environment. Developer can use this property to synchronize access to the source stream. Following code snippet demonstrates how the **SyncRoot** property can be used.
 
 {{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-src-main-java-com-aspose-imaging-examples-ConvertingImages-SyncRootProperty-ExportImagesInMultiThreadedEnvironment.java" >}}
-
-
-
 
 
 

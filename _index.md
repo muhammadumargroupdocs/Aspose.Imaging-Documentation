@@ -62,7 +62,7 @@ Following are the links to some useful resources you may need to accomplish your
 
 {{% alert color="primary" %}}
 
-![todo:image_alt_text](home_3)
+![todo:image_alt_text](home_3.png)
 
 **Welcome to the Aspose.Imaging for SharePoint**
 
