@@ -25,7 +25,7 @@ url: /java/supported-file-formats/
 |[Svg](https://wiki.fileformat.com/page-description-language/svg/)|Version 1.1|{{< emoticons/tick >}}|{{< emoticons/tick >}}|
 |[Tiff](https://wiki.fileformat.com/image/tiff/)|Version 6.0*|{{< emoticons/tick >}}|{{< emoticons/tick >}}|
 |[Dib](https://en.wikipedia.org/wiki/BMP_file_format)|BMP Specification v5|{{< emoticons/tick >}}| |
-|[Eps](https://wiki.fileformat.com/page-description-language/eps/)| |{{< emoticons/tick >}} (Only preview)| |
+|[Eps](https://wiki.fileformat.com/page-description-language/eps/)| |{{< emoticons/tick >}}| |
 |[WebP](https://wiki.fileformat.com/image/webp/)| |{{< emoticons/tick >}}| |
 |[Wmf](https://wiki.fileformat.com/image/wmf/)|Revision 13.0|{{< emoticons/tick >}}|{{< emoticons/tick >}}|
 |[Cdr](https://wiki.fileformat.com/image/cdr/)|Version X7, X6 (3-x5 not completely)|{{< emoticons/tick >}}| |
