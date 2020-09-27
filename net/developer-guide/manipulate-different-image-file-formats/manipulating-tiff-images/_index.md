@@ -182,6 +182,20 @@ You can easily modify already existing Clipping Paths. For instance, you can kee
 You can manually create Clipping Path in TIFF image. In order to do that you need to create an instance of *PathResource* class. The following code demonstrates the way how you can create an empty path in TIFF image:
 
 {{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-Create-Clipping-Path-Manually.cs" >}}
+
+#### **Get existing Clipping Path**
+The following code shows how to get existing Clipping Path from TIFF image:
+{{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-get-existing-clipping-path.cs" >}}
+
+#### **Change Clipping Path**
+In case if you have multiple paths in TIFF image you can easily change which of them is Clipping Path:
+{{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-change-clipping-path.cs" >}}
+
+#### **Create Clipping Path from scratch**
+The following source code sample demonstrates how to create paths in TIFF image from scratch:
+{{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-create-clipping-path-from-scratch.cs" >}}
+
+
 #### **Clipping Path content**
 To create your own Clipping Paths you need to understand their content. Photoshop stores its paths as resources with IDs in the range 2000 through 2997. The name of the resource is the name given to the path when it was saved. If the file contains a resource with an ID of 2999, then this resource contains the name of the clipping path. Each path has a set of records to hold the data.
 
