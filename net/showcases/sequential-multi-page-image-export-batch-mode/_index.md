@@ -5,7 +5,6 @@ weight: 70
 url: /net/sequential-multi-page-image-export-batch-mode/
 ---
 
-# **Overview**
 In the normal mode of operation, operations with multi-page images use the necessary available application memory, using it for operations on all pages. If the image has a lot of pages, and all of them are large, then the application will soon begin to use the maximum available memory. At the same time, in cases where the maximum available memory is insufficient to process all image pages, there will be a noticeable decrease in performance for this processing.
 
 As an alternative solution for processing multi-page images, the sequential export mode was implemented. This approach implements the idea of "Loading a page into memory from an input stream --> processing a page (for example, a rotation operation) --> exporting a page to an output stream --> freeing memory --> loading the next page, and so on".
@@ -17,7 +16,7 @@ In the following example, in sequential export mode, all pages are also rotated 
 {{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Tiff-batch-mode-example.cs" >}}
 
 The described scenario allows you to get rid of excessive use of application memory, while performing operations as fast as in standard mode.
-## **Standard mode**
+## **Normal export mode**
 {{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-tiff-rotate.cs" >}}
 
 ![todo:image_alt_text](sequential-multi-page-image-export-batch-mode_1.png)

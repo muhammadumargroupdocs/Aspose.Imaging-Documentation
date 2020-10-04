@@ -5,8 +5,6 @@ weight: 70
 url: /net/convert-eps-image-to-different-formats-using-postscript-rendering/
 ---
 
-# Convert EPS image to different formats using PostScript rendering
-
 ### What is EPS image format?
 
 EPS file format is short for Encapsulated PostScript. It was created by  Adobe back in 1992. It’s a standard graphics file format intended for  placing images or drawings within a PostScript Document. Basically it’s a postscript program saved as a single file. EPS file also includes a  low-resolution preview of the graphics inside which makes it accessible  with programs not capable of editing the script inside. EPS file format  is widely used by publishers because of its compatibility across  different operating systems.
@@ -25,7 +23,7 @@ In the **Data** folder you can see **Sample.eps** image. We will use it to conve
 
 ![](EpsSampleImage.png)
 
-### Convert EPS image to PNG
+### Convert EPS to PNG
 
 The following code converts EPS image to PNG. The property **PreviewToExport** allows to select the source of the image to export from EPS file. The value **PostScriptRendering** of the enumeration **EpsPreviewFormat** cause rendering from PostScript to raster image.
 

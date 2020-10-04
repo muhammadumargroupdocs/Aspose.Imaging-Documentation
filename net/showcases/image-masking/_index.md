@@ -27,13 +27,13 @@ Below we can observe masking results of original image.
 |*Original image*|1. *K-means image segmentation algorithm (Value metric : Color intensity)*|*2. K-means image segmentation algorithm (Value metric : Color intensity), **with indicating rectangular area for foreground***|3. *K-means image segmentation algorithm (Value metric : Color intensity * Euclidean distance)*|4. Marker-controlled Watershed algorithm|5. Graph Cut algorithm (with indicating areas by user)|
 | :- | :- | :- | :- | :- | :- |
 | ![](GoogleGorilla.jpg) |![](GoogleGorilla._foreground.png)| ![](kmri_GoogleGorilla._foreground.png)                      | ![](kme2_GoogleGorilla._foreground.png)                      |![](ws3_GoogleGorilla._foreground.png)|![](graphcut2_GoogleGorilla._foreground.png)|
-### **Manual masking**
+## **Manual masking**
 
 The following code snippet provided below demonstrates how to apply manual masking to a raster image.
 
 {{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-CSharp-ModifyingAndConvertingImages-ManualImageMasking-ManualImageMasking.cs" >}}
 
-### **Auto masking**
+## **Auto masking**
 
 The following code snippet provided below demonstrates how to apply auto masking to a raster image.
 
