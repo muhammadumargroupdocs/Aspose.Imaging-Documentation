@@ -5,16 +5,18 @@ weight: 50
 url: /net/manipulating-tga-images/
 ---
 
-### **Convert JPG to TGA**
+Truevision TGA, often referred to as TARGA, is a raster graphics file format created by Truevision Inc. (now part of Avid Technology). It was the native format of TARGA and VISTA boards, which were the first graphic cards for IBM-compatible PCs to support Highcolor/truecolor display. This family of graphic cards was intended for professional computer image synthesis and video editing with PCs; for this reason, usual resolutions of TGA image files match those of the NTSC and PAL video formats
+
+## **Convert JPG to TGA**
 
 {{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-jpg-to-TGA.cs" >}}
 
-### **Convert Png to TGA**
+## **Convert Png to TGA**
 
 
 {{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-png-to-TGA.cs" >}}
 
 
-### **Save to TGA**
+## **Save to TGA**
 
 {{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-save-to-TGA.cs" >}}
