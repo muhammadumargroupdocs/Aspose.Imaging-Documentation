@@ -103,6 +103,10 @@ Aspose.Imaging for .NET has provided **Rotate** and **RotateFlip** methods of **
 Aspose.Imaging supports export from various raster file formats including multi-paged to DICOM. Below there are some examples related to this.
 
 {{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "ExportToDicom.cs" >}}
+## **Support of Jpeg, Jpeg2000 and RLE compression methods in Dicom**
+Dicom format can be compressed using Jpeg, Jpeg2000 and RLE compressions.
+{{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-dicom-compression-JPEG-JPEG2000-RLE.cs" >}}
+
 ## **Memory strategy optimization**
 The memory optimization strategy is now supported for Dicom images.
 
