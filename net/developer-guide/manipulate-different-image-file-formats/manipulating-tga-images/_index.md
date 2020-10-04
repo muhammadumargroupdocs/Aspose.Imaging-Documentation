@@ -15,6 +15,6 @@ url: /net/manipulating-tga-images/
 {{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-png-to-TGA.cs" >}}
 
 
-### **Convert Save to TGA**
+### **Save to TGA**
 
 {{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-save-to-TGA.cs" >}}

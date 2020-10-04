@@ -5,9 +5,8 @@ weight: 10
 url: /net/compressed-vector-formats/
 ---
 
-# **Overview**
 Compressed vector images are vector images of the EMF, WMF, SVG formats compressed using a zip archiver. Their size averages from 30-70% of the original. This saves space on media and reduces file transfer time over the network. But you should pay attention to the fact that not all applications work with compressed vector formats. See below for more details. 
-## **SVGZ**
+## SVGZ
 SVGZ files are typically 50 to 80 percent smaller in size than SVG.
 
 For example, take any SVG file and compress it to SVGZ:
@@ -30,7 +29,7 @@ We can open this file using any of the above applications.
 Using the following code, it is possible to **convert the SVGZ to SVG:**
 
 {{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-Svgz-to-Svg-example.cs" >}}
-## **EMZ**
+## EMZ
 A file with the EMZ file extension is a  actually just GZIP compressed EMF files, which is a graphics format used by Microsoft (**MS Word, MS Visio**)
 
 For example, take any EMF file and compress it to EMZ:
@@ -51,7 +50,7 @@ Open result emz file in MS Word
 Using the following code, it is possible to **convert the EMZ to EMF**
 
 {{< gist "aspose-com-gists" "2d1bcb9853315458808ffbcd9e7e3e02" "Examples-Emz-to-Emf-example.cs" >}}
-## **WMZ**
+## WMZ
 A file with the WMZ file extension is a  actually just GZIP compressed WMF files, which is a graphics format used by Microsoft (**MS Word, MS Visio**).
 
 For example, take any WMF file and compress it to WMZ:
