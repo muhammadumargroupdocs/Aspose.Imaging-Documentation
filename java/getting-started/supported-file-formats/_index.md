@@ -35,5 +35,5 @@ url: /java/supported-file-formats/
 |[Html5 canvas](https://en.wikipedia.org/wiki/Canvas_element)|Html5 canvas element| |![todo:image_alt_text](supported-file-formats_1.png)|
 |[Emz](https://ru.wikipedia.org/wiki/Windows_Metafile)|Compressed emf format|{{< emoticons/tick >}}|{{< emoticons/tick >}}|
 |[Wmz](https://en.wikipedia.org/wiki/Windows_Metafile)|Compressed wmf format|{{< emoticons/tick >}}|{{< emoticons/tick >}}|
+|[Tga](https://en.wikipedia.org/wiki/Truevision_TGA)|Truevision TGA (TARGA)|{{< emoticons/tick >}}|{{< emoticons/tick >}}|
 |[Svgz](https://ru.wikipedia.org/wiki/SVG)|Compressed svg file format|{{< emoticons/tick >}}|{{< emoticons/tick >}}|
-
