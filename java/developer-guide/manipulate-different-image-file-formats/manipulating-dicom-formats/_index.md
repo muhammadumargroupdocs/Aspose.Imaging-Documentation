@@ -111,6 +111,44 @@ The steps to perform Rotate & Flip are as simple as below:
 Aspose.Imaging supports export from various raster file formats including multi-paged to DICOM. Below there are some examples related to this.
 
 {{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "ExportToDicom.java" >}}
+
+## **Support of Jpeg, Jpeg2000 and RLE compression methods in Dicom**
+Dicom format can be compressed using Jpeg, Jpeg2000 and RLE compressions.
+
+### What is a DICOM Image File?
+The DICOM standard is useful for integrating all modern imaging equipments, accessories, networking servers, workstations and printers. Because of its ease of integration and continuous evolution this communication standard has over the years achieved a nearly universal level of acceptance among vendors of radiological equipment.
+
+A DICOM image file is an outcome of the Digital Imaging and Communications in Medicine standard. Specifically, image files that are compliant with part 10 of the DICOM standard are generally referred to as “DICOM format files” or simply “DICOM files” and are represented as “.dcm”.
+
+### DICOM compression settings
+The property ***DicomOptions.Compression*** allows you to specify compression settings. For instance, ***CompressionType*** enumeration allows you to select compression algorithm: *None*, *Jpeg*, *Jpeg2000* or *Rle*. The *None* option corresponds to uncompressed DICOM image. The following code shows how to use DICOM compression settings:
+
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-dicom-no-compression.java" >}}
+
+### Using JPEG compression in DICOM image
+To use JPEG compression algorithm you should specify *CompressionType.Jpeg* enumeration value in ***Compression.Type*** property:
+
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-dicom-jpeg-compression.java" >}}
+
+You can tune JPEG compression algorithm using ***Compression.Jpeg*** property. For instance, you can specify the *CompressionType*, *SampleRoundingMode* and *Quality*:
+
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-dicom-jpeg-tuned-compression.java" >}}
+
+### Using JPEG 2000 compression in DICOM image
+To use JPEG 2000 compression you need to use *CompressionType.Jpeg2000* enumeration value and ***Jpeg2000Options*** class for algorithm settings. The following code demonstrates how to specify JPEG 2000 *Codec* and *Irreversible* properties:
+
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-dicom-jpeg2000-compression.java" >}}
+
+### Using RLE compression in DICOM image
+For this compression type you need to use *CompressionType.Rle* enumeration value. The RLE compression algorithm doesn't have additional settings. The following code shows how you can use RLE compression algorithm in DICOM image:
+
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-dicom-rle-compression.java" >}}
+
+### How to change Color Type in DICOM compression
+The property ***DicomOptions.ColorType*** allows you to change color type in DICOM compression. There are several supported color types: *Grayscale8Bit*, *Grayscale16Bit* and *Rgb24Bit*. Use the following code in order to change the color type:
+
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-dicom-grayscale.java" >}}
+
 ## **Memory strategy optimization**
 The memory optimization strategy is now supported for Dicom images.
 
