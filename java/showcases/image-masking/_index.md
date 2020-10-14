@@ -31,16 +31,16 @@ Below we can observe masking results of original image.
 
 The following code snippet provided below demonstrates how to apply manual masking to a raster image.
 
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-src-main-java-com-aspose-imaging-examples-ModifyingImages-ManualImageMasking-ManualImageMasking.java" />}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-src-main-java-com-aspose-imaging-examples-ModifyingImages-ManualImageMasking-ManualImageMasking.java" >}}
 
 
 ## **Auto masking**
 
 The following code snippet provided below demonstrates how to apply auto masking to a raster image.
 
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-src-main-java-com-aspose-imaging-examples-ModifyingImages-AutoImageMasking-AutoImageMasking.java" />}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-src-main-java-com-aspose-imaging-examples-ModifyingImages-AutoImageMasking-AutoImageMasking.java" >}}
 
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-src-main-java-com-aspose-imaging-examples-ModifyingImages-AutoImageMasking-FillInputPoints.java" />}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-src-main-java-com-aspose-imaging-examples-ModifyingImages-AutoImageMasking-FillInputPoints.java" >}}
 
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-src-main-java-com-aspose-imaging-examples-ModifyingImages-AutoImageMasking-LEIntegerReader.java" />}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-src-main-java-com-aspose-imaging-examples-ModifyingImages-AutoImageMasking-LEIntegerReader.java" >}}
 

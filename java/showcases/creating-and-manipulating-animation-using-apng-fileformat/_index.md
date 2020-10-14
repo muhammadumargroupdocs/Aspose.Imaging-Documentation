@@ -15,7 +15,7 @@ compatibility with non-animated PNG files.
 
 ### **1) Export APNG animation to animated GIF** 
 
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Export-APNG-to-Gif.java" \>}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Export-APNG-to-Gif.java" >}}
 
 
 | ![Input image](creating-and-manipulating-animation-using-apng-fileformat_1.png) | ![Result image](creating-and-manipulating-animation-using-apng-fileformat_2.gif) |
@@ -24,7 +24,7 @@ compatibility with non-animated PNG files.
 
 ### **2) Create an animation from multi-page Tiff file** 
 
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Save-to-Animated-APNG-from-Multi-Page-Tiff.java" \>}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Save-to-Animated-APNG-from-Multi-Page-Tiff.java" >}}
 
 
 ​										[Source image - img4.tif](attachments/106203944/106365366.tif)
@@ -35,7 +35,7 @@ Result animation:
 
 ### **3) Create APNG animation from single-page image** 
 
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Create-APNG-animation-from-single-image.java" \>}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Create-APNG-animation-from-single-image.java" >}}
 
 | ![todo:image_alt_text](creating-and-manipulating-animation-using-apng-fileformat_4.png) | ![todo:image_alt_text](creating-and-manipulating-animation-using-apng-fileformat_5.png) |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
@@ -43,7 +43,7 @@ Result animation:
 
 ### **4) Create APNG animation using vector graphics** 
 
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Create-APNG-animation-using-vector-Graphics.java" \>}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Create-APNG-animation-using-vector-Graphics.java" >}}
 
 
 Created from graphics animation:

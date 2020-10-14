@@ -13,7 +13,7 @@ The Canvas element is not supported in some older browsers, but is supported in 
 Using the Canvas is not very difficult. You do not have to know HTML, JavaScript or CSS. Aspose.Imaging library will
 generate all required code for you.
 ## Example of convertion SVG to HTML5 canvas
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Export-HTML5-Canvas.java" />}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Export-HTML5-Canvas.java" >}}
 
 and resulting image will be as
 
@@ -21,6 +21,6 @@ and resulting image will be as
 
 Source code for generated code can be previewed at <https://jsfiddle.net/fqgwmn87/2/>
 ## Example of convertion Cdr to HTML5 canvas
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Export-Cdr-HTML5-Canvas.java" />}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Export-Cdr-HTML5-Canvas.java" >}}
 
 Example of generated source code available at <https://jsfiddle.net/fqgwmn87/1/> and <https://jsfiddle.net/fqgwmn87/>

@@ -13,17 +13,17 @@ Sequential multi-page image export mode is activated by setting the delegate to 
 
 In the following example, in sequential export mode, all pages are also rotated 90 degrees beforehand:
 
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Tiff-batch-mode-example.java" />}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Tiff-batch-mode-example.java" >}}
 
 The described scenario allows you to get rid of excessive use of application memory, while performing operations as fast as in standard mode.
 ## **Normal export mode**
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-tiff-rotate.java" />}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-tiff-rotate.java" >}}
 
 ![todo:image_alt_text](sequential-multi-page-image-export-batch-mode_1.png)
 
 Fig. 1 - Graph of memory consumption in standard export mode.
 ## **Sequential export mode**
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Tiff-batch-mode-example.java" />}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Tiff-batch-mode-example.java" >}}
 
 ![todo:image_alt_text](sequential-multi-page-image-export-batch-mode_2.png)
 

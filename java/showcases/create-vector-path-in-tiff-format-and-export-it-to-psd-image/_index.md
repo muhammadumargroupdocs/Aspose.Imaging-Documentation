@@ -29,7 +29,7 @@ As you can see on screenshot, a ***Sample.tiff*** image has no any Paths. We wil
 
 Please, use the following code to create a new path in our Tiff image:
 
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Create-Clipping-Path-Tiff-Psd-Manually.java" />}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Create-Clipping-Path-Tiff-Psd-Manually.java" >}}
 
 Created Path should look like similar to the following screenshot:
 
@@ -40,7 +40,7 @@ Created Path should look like similar to the following screenshot:
 ## Transfer Clipping Path to Psd image during the export
 
 Its quite helpful to use Paths in Psd images. You can easily transfer the Path using the following code:
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-transfer-clipping-path-from-tiff-to-psd.java" />}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-transfer-clipping-path-from-tiff-to-psd.java" >}}
 The Path transferred to Psd image is identical to Tiff Path:
 
 ![](TransferredPath.png)

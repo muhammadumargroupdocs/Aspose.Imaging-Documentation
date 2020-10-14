@@ -27,7 +27,7 @@ In the **Data** folder you can see **Sample.eps** image. We will use it to conve
 
 The following code converts EPS image to PNG. The property **PreviewToExport** allows to select the source of the image to export from EPS file. The value **PostScriptRendering** of the enumeration **EpsPreviewFormat** cause rendering from PostScript to raster image.
 
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Convert-Eps-To-Png.java" />}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Convert-Eps-To-Png.java" >}}
 
 As a result you can see a PNG image rendered using a PostScript from EPS file:
 
@@ -37,7 +37,7 @@ As a result you can see a PNG image rendered using a PostScript from EPS file:
 
 *Aspose.Imaging* library allows you to export EPS image to other formats. For that you  just need to use corresponding Image options. The following code  demonstrates how to export EPS image to PDF:
 
-{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Convert-Eps-To-Pdf.java" />}}
+{{< gist "aspose-com-gists" "07be292db0a393dc95f153f84b28c069" "Examples-Convert-Eps-To-Pdf.java" >}}
 
 On the following image you can see created PDF file:
 
