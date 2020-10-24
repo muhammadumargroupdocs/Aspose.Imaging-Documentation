@@ -32,6 +32,19 @@ Please see corresponding cumulative [API changes for Aspose.Imaging for .NET 20.
 
 Please see corresponding cumulative [API changes for Aspose.Imaging for .NET 20.10](https://docs.aspose.com/imaging/net/aspose-imaging-for-net-20-10-release-notes/) version
 
+***Java specific***
+
+Method    com.aspose.imaging.FontSettings.getFontsSources
+Method    com.aspose.imaging.FontSettings.useJavaFontEngine(boolean)
+Method    com.aspose.imaging.FontSettings.isJavaFontEngineUsed
+Method    com.aspose.imaging.FontSettings.resetFontSources
+Method    com.aspose.imaging.FontSettings.findFont(java.lang.String,int,int)
+Method    com.aspose.imaging.FontSettings.getAllFonts
+Method    com.aspose.imaging.FontSettings.addFontSubstitutes(java.lang.String,java.lang.String[])
+Method    com.aspose.imaging.FontSettings.getFontSubstitutes(java.lang.String)
+Method    com.aspose.imaging.FontSettings.setFontSubstitutes(java.lang.String,java.lang.String[])
+Method    com.aspose.imaging.FontSettings.findFont(java.util.Map)
+
 **Usage Examples:**
 -----------------------
 
