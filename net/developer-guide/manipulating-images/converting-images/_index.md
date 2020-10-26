@@ -74,7 +74,7 @@ See
 
 ## **Converting Corel Draw images**
 See 
-[Convert CDR](/imaging/net/convert-cdr-html/)
+[Convert CDR](/imaging/net/convert-cdr/)
 ## **Converting webp images**
 See
 [Convert webp images](/imaging/net/convert-webp-images/)
