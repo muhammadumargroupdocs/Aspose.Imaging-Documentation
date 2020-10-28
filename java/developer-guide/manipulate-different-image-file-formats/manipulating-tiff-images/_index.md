@@ -84,7 +84,7 @@ Please note, the above provided code snippet requires setting the valid license 
 1. Create an instance of any ImageOptionsBase for desired format and set mandatory properties. For the sake of elaboration, we will use JpegOptions.
 1. Create a new JPEG image using the JpegOptions object and save JPEG image using frame pixels copied in the Colors array.
 
-{{< gist "aspose-imaging" "8c9bd83e0d07145ba0c1" "Examples-src-main-java-com-aspose-imaging-examples-ManipulatingTIFFImages-ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality-ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality.java" >}}
+{{< gist "aspose-imaging" "8c9bd83e0d07145ba0c1" "Examples-ExtractTIFFFramestoOtherImageFormatusingCoreFunctionality.java" >}}
 
 {{% alert color="primary" %}} 
 
