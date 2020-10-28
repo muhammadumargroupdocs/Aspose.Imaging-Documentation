@@ -1,5 +1,5 @@
 ---
-title: Convert cmx to pdf
+title: Convert cmx to tiff
 type: docs
 weight: 20
 url: /net/convert-cmx-to-tiff/
