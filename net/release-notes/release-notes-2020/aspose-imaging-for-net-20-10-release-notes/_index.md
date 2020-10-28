@@ -21,6 +21,8 @@ title: Aspose.Imaging for .NET 20.10 - Release notes
 | IMAGINGNET-4058 | IndexOutOfRangeExceptions when exporting JPEG YCbCr to PNG Grayscale                                                                                                                                  | Enhancement      |
 | IMAGINGNET-3546 | MS Paint cannot open Aspose.Imaging EMF                                                                                                                                  | Enhancement      |
 
+Since current release Aspose.Imaging .NET Standard API is tested for Linux.
+
 **Public API changes:**
 -----------------------
 
