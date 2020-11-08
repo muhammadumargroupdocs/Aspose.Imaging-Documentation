@@ -3,6 +3,8 @@ title: Convert APNG files
 type: docs
 weight: 10
 url: /net/convert-apng-files/
+aliases:
+- /net/convert-apng-files-html/
 ---
 
 # **Overview**
